@@ -1,0 +1,3 @@
+display_name: "Browser Fingerprint Analysis"
+short_description: "Beginner-friendly reverse-engineering workflow for Browser Fingerprint Analysis. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use browser-fingerprint-analysis in beginner mode, then produce an evidence-backed and reproducible result."

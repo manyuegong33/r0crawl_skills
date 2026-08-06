@@ -1,0 +1,3 @@
+﻿display_name: "r0crawl_skills · 全栈逆向总控"
+short_description: "Web、移动端、Native、协议与恶意样本逆向的总控路由器"
+default_prompt: "启动 r0crawl_skills：先建立证据表，再按目标自动组合静态分析、动态 Hook、协议还原、补环境和样本复现技能。"

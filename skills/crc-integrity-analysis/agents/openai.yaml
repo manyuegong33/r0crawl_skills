@@ -1,0 +1,3 @@
+display_name: "CRC, hash, code-section integrity, self-check, library verification, and mutation evidence"
+short_description: "Beginner-friendly workflow for CRC, hash, code-section integrity, self-check, library verification, and mutation evidence. Extracts general methods and evidence practices without depending on any author, private repository, personal path, secret, or branded prompt."
+default_prompt: "Use crc-integrity-analysis in beginner mode and produce an evidence-backed, reproducible result."

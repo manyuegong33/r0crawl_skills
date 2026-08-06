@@ -1,0 +1,3 @@
+display_name: "Runtime Patch Validation"
+short_description: "Beginner-friendly reverse-engineering workflow for Runtime Patch Validation. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use runtime-patch-validation in beginner mode, then produce an evidence-backed and reproducible result."

@@ -1,0 +1,3 @@
+display_name: "Vendor Shumei Captcha"
+short_description: "Beginner-friendly reverse-engineering workflow for Vendor Shumei Captcha. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use vendor-shumei-captcha in beginner mode, then produce an evidence-backed and reproducible result."

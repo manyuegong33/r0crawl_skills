@@ -1,0 +1,3 @@
+display_name: "Symbol Recovery And Structs"
+short_description: "Beginner-friendly reverse-engineering workflow for Symbol Recovery And Structs. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use symbol-recovery-and-structs in beginner mode, then produce an evidence-backed and reproducible result."

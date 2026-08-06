@@ -1,0 +1,3 @@
+display_name: "Reproducible Android reverse setup audit without modifying tool versions or devices unexpectedly"
+short_description: "Beginner-friendly workflow for Reproducible Android reverse setup audit without modifying tool versions or devices unexpectedly. Extracts general methods and evidence practices without depending on any author, private repository, personal path, secret, or branded prompt."
+default_prompt: "Use android-reverse-setup-audit in beginner mode and produce an evidence-backed, reproducible result."

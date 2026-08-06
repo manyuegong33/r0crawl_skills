@@ -1,0 +1,3 @@
+display_name: "Web Taobao Mtop H5St"
+short_description: "Beginner-friendly reverse-engineering workflow for Web Taobao Mtop H5St. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use web-taobao-mtop-h5st in beginner mode, then produce an evidence-backed and reproducible result."

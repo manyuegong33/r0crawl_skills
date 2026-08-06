@@ -1,0 +1,3 @@
+display_name: "Anonymous Executable Memory"
+short_description: "Beginner-friendly reverse-engineering workflow for Anonymous Executable Memory. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use anonymous-executable-memory in beginner mode, then produce an evidence-backed and reproducible result."

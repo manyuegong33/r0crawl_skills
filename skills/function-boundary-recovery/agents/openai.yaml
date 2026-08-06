@@ -1,0 +1,3 @@
+display_name: "Function Boundary Recovery"
+short_description: "Beginner-friendly reverse-engineering workflow for Function Boundary Recovery. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use function-boundary-recovery in beginner mode, then produce an evidence-backed and reproducible result."

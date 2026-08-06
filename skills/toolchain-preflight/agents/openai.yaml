@@ -1,0 +1,3 @@
+display_name: "On-demand toolchain checks for adb, Frida, JADX, IDA, Ghidra, Python, Capstone, Unicorn, and device state"
+short_description: "Beginner-friendly workflow for On-demand toolchain checks for adb, Frida, JADX, IDA, Ghidra, Python, Capstone, Unicorn, and device state. Extracts general methods and evidence practices without depending on any author, private repository, personal path, secret, or branded prompt."
+default_prompt: "Use toolchain-preflight in beginner mode and produce an evidence-backed, reproducible result."

@@ -1,0 +1,3 @@
+display_name: "Uniapp Reversing"
+short_description: "Beginner-friendly reverse-engineering workflow for Uniapp Reversing. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use uniapp-reversing in beginner mode, then produce an evidence-backed and reproducible result."

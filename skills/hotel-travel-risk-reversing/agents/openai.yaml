@@ -1,0 +1,3 @@
+display_name: "Hotel Travel Risk Reversing"
+short_description: "Beginner-friendly reverse-engineering workflow for Hotel Travel Risk Reversing. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use hotel-travel-risk-reversing in beginner mode, then produce an evidence-backed and reproducible result."

@@ -1,0 +1,3 @@
+display_name: "Js Hook Engineering"
+short_description: "Beginner-friendly reverse-engineering workflow for Js Hook Engineering. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use js-hook-engineering in beginner mode, then produce an evidence-backed and reproducible result."

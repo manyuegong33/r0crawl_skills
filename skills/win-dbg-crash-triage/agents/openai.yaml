@@ -1,0 +1,3 @@
+display_name: "Win Dbg Crash Triage"
+short_description: "Beginner-friendly reverse-engineering workflow for Win Dbg Crash Triage. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use win-dbg-crash-triage in beginner mode, then produce an evidence-backed and reproducible result."

@@ -1,0 +1,3 @@
+display_name: "Vendor Jd Jcap H5St"
+short_description: "Beginner-friendly reverse-engineering workflow for Vendor Jd Jcap H5St. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use vendor-jd-jcap-h5st in beginner mode, then produce an evidence-backed and reproducible result."

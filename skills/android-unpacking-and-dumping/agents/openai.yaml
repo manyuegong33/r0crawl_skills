@@ -1,0 +1,3 @@
+display_name: "Android Unpacking And Dumping"
+short_description: "Beginner-friendly reverse-engineering workflow for Android Unpacking And Dumping. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use android-unpacking-and-dumping in beginner mode, then produce an evidence-backed and reproducible result."

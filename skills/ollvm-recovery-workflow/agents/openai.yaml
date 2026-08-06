@@ -1,0 +1,3 @@
+display_name: "Ollvm Recovery Workflow"
+short_description: "Beginner-friendly reverse-engineering workflow for Ollvm Recovery Workflow. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use ollvm-recovery-workflow in beginner mode, then produce an evidence-backed and reproducible result."

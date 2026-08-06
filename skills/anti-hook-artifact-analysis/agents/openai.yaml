@@ -1,0 +1,3 @@
+display_name: "Detect and classify instrumentation artifacts in maps, threads, modules, file descriptors, and timing"
+short_description: "Beginner-friendly workflow for Detect and classify instrumentation artifacts in maps, threads, modules, file descriptors, and timing. Extracts general methods and evidence practices without depending on any author, private repository, personal path, secret, or branded prompt."
+default_prompt: "Use anti-hook-artifact-analysis in beginner mode and produce an evidence-backed, reproducible result."

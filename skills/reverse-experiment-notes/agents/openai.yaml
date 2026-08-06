@@ -1,0 +1,3 @@
+display_name: "Detailed reverse-engineering experiment records, timelines, commands, diffs, decisions, and handoff notes"
+short_description: "Beginner-friendly workflow for Detailed reverse-engineering experiment records, timelines, commands, diffs, decisions, and handoff notes. Extracts general methods and evidence practices without depending on any author, private repository, personal path, secret, or branded prompt."
+default_prompt: "Use reverse-experiment-notes in beginner mode and produce an evidence-backed, reproducible result."

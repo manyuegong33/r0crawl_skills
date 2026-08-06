@@ -1,0 +1,3 @@
+display_name: "Anti Analysis And Integrity"
+short_description: "Beginner-friendly reverse-engineering workflow for Anti Analysis And Integrity. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use anti-analysis-and-integrity in beginner mode, then produce an evidence-backed and reproducible result."

@@ -1,0 +1,3 @@
+display_name: "IDA project export, function-range extraction, naming, type propagation, xrefs, and machine-readable artifacts"
+short_description: "Beginner-friendly workflow for IDA project export, function-range extraction, naming, type propagation, xrefs, and machine-readable artifacts. Extracts general methods and evidence practices without depending on any author, private repository, personal path, secret, or branded prompt."
+default_prompt: "Use ida-inp-export in beginner mode and produce an evidence-backed, reproducible result."

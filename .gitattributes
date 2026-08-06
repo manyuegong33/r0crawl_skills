@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.md text working-tree-encoding=UTF-8
+*.py text working-tree-encoding=UTF-8
+*.yaml text working-tree-encoding=UTF-8
+*.yml text working-tree-encoding=UTF-8
+*.json text working-tree-encoding=UTF-8
+*.js text working-tree-encoding=UTF-8
+*.ps1 text working-tree-encoding=UTF-8
+*.png binary
+*.jpg binary
+*.gif binary
+*.zip binary

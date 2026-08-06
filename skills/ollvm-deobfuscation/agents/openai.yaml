@@ -1,0 +1,3 @@
+display_name: "Ollvm Deobfuscation"
+short_description: "Beginner-friendly reverse-engineering workflow for Ollvm Deobfuscation. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use ollvm-deobfuscation in beginner mode, then produce an evidence-backed and reproducible result."

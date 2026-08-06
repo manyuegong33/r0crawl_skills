@@ -1,0 +1,3 @@
+display_name: "Web Xiaohongshu Xs Xt"
+short_description: "Beginner-friendly reverse-engineering workflow for Web Xiaohongshu Xs Xt. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use web-xiaohongshu-xs-xt in beginner mode, then produce an evidence-backed and reproducible result."

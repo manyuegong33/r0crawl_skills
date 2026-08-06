@@ -1,0 +1,3 @@
+display_name: "Build Artifact Reproducibility"
+short_description: "Beginner-friendly reverse-engineering workflow for Build Artifact Reproducibility. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use build-artifact-reproducibility in beginner mode, then produce an evidence-backed and reproducible result."

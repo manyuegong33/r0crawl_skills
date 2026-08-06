@@ -1,0 +1,3 @@
+display_name: "Javascript Obfuscator Family"
+short_description: "Beginner-friendly reverse-engineering workflow for Javascript Obfuscator Family. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use javascript-obfuscator-family in beginner mode, then produce an evidence-backed and reproducible result."

@@ -1,0 +1,3 @@
+display_name: "Memory Forensics"
+short_description: "Beginner-friendly reverse-engineering workflow for Memory Forensics. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use memory-forensics in beginner mode, then produce an evidence-backed and reproducible result."

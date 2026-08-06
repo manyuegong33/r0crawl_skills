@@ -1,0 +1,34 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: UTF-8 check
+        run: python scripts/check_utf8.py .
+      - name: Regenerate index
+        run: python scripts/index_skills.py
+      - name: Compile helper scripts
+        run: python -m compileall scripts
+      - name: Validate skill frontmatter
+        shell: python
+        run: |
+          import pathlib, re, sys, yaml
+          paths = [pathlib.Path("SKILL.md")] + sorted(pathlib.Path("skills").glob("*/SKILL.md"))
+          for path in paths:
+              text = path.read_text(encoding="utf-8")
+              match = re.match(r"^---\n(.*?)\n---", text, re.S)
+              if not match:
+                  raise SystemExit(f"missing frontmatter: {path}")
+              data = yaml.safe_load(match.group(1))
+              if not data.get("name") or not data.get("description"):
+                  raise SystemExit(f"missing metadata: {path}")
+          print(f"validated {len(paths)} skills")

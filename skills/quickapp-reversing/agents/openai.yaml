@@ -1,0 +1,3 @@
+display_name: "Quickapp Reversing"
+short_description: "Beginner-friendly reverse-engineering workflow for Quickapp Reversing. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result."
+default_prompt: "Use quickapp-reversing in beginner mode, then produce an evidence-backed and reproducible result."

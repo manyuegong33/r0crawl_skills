@@ -1,0 +1,41 @@
+---
+name: web-signature-analysis
+description: |
+  Beginner-friendly reverse-engineering workflow for Web Signature Analysis. Use it to collect evidence, choose static or dynamic analysis, correlate runtime behavior, and produce a reproducible result.
+---
+
+# Web Signature Analysis
+
+## Beginner mode
+
+Explain what the target is, what question this module answers, what evidence is needed, and what success looks like. Define tools and acronyms before using them.
+
+## Workflow
+
+1. Record the artifact, version, architecture, entry action, environment, hash, and desired output.
+2. Preserve raw files, requests, logs, traces, screenshots, symbols, and command history.
+3. Start with the smallest observation that distinguishes competing hypotheses.
+4. Separate static facts, runtime observations, inferences, and unresolved questions.
+5. Correlate code, call stacks, memory, files, traffic, and outputs instead of trusting one signal.
+6. Build a minimal reproducer, fixture, hook, dump validation, or report.
+7. Test normal, edge, empty/default, repeated, and cross-version cases when possible.
+
+## Quality gates
+
+- Do not infer a call chain from a string alone.
+- Do not accept a dump until headers, mappings, imports/relocations, symbols, and a consumer tool validate it.
+- Do not call a patch or detection workaround stable until clean baseline, cold start, warm start, and repeated runs are compared.
+- Record tool versions, commands, paths, hashes, offsets, timestamps, and first-difference locations.
+- If evidence is missing, state the smallest next artifact required.
+
+## Deliverables
+
+- Plain-English beginner summary.
+- Evidence table and confidence level.
+- Technical chain: entry -> loader -> detector or logic -> output.
+- Scripts, commands, fixtures, or report files.
+- Limitations, rollback or recovery notes, and next action.
+
+## Collaboration
+
+Use `triage-and-route` and `evidence-collection` first. Combine with the relevant static, runtime, protocol, environment, emulation, malware, or parity module. Finish with `reconstruction-and-parity` or `systematic-debugging` when applicable.
