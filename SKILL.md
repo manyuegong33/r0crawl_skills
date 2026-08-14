@@ -55,6 +55,9 @@ For `start`, `reverse start`, `mixed start`, or `full reverse`:
 | crash, fuzz, minidump, coverage, harness | `fuzzing-and-crash-analysis`, `crash-dump-symbolication`, `emulation-unicorn-angr` |
 | OAuth, JWT, GraphQL, cloud, agent, tool protocol | `cloud-api-reversing`, `llm-agent-security-reversing` |
 | CTF, crackme, archive, flag, sandbox | `ctf-reversing`, `ctf-sandbox-orchestration` |
+| PyInstaller, pyc, PYZ, pythonXY.dll, frozen Python | `python-frozen-app-reversing`, `ctf-reverse-pivot-control` |
+| CPython frame, code object, PyEval, marshal runtime | `cpython-runtime-introspection` |
+| CTF key, serial, known plaintext, repeating XOR | `ctf-key-recovery`, `reconstruction-and-parity` |
 
 ## Vendor and scenario shortcuts
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Frozen App Reversing"
+  short_description: "Recover logic from frozen and modified Python apps"
+  default_prompt: "Use -frozen-app-reversing to unpack and recover the real logic from this PyInstaller or frozen Python executable."

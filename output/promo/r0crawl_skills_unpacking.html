@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: localCN; src: local("Microsoft YaHei"); }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; color:#101827; background:#f6f9ff; }
+.page { width:1600px; min-height:1100px; padding:44px 52px; background:
+  radial-gradient(circle at 8% 0%, rgba(41,121,255,.16), transparent 30%),
+  radial-gradient(circle at 95% 12%, rgba(0,194,168,.14), transparent 30%),
+  linear-gradient(135deg,#f8fbff 0%,#ffffff 45%,#f8fbff 100%); }
+h1 { margin:0; text-align:center; font-size:48px; line-height:1.18; letter-spacing:0; font-weight:900; }
+.subtitle { margin-top:14px; text-align:center; font-size:22px; color:#39506e; }
+.repo { color:#1167e8; font-weight:800; }
+.card { background:rgba(255,255,255,.88); border:1px solid rgba(102,144,197,.24); box-shadow:0 18px 50px rgba(29,78,137,.10); border-radius:18px; }
+.badge { display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:9px 16px; background:#e9f2ff; color:#0f61cc; font-weight:800; font-size:18px; }
+.grid { display:grid; gap:22px; }
+.kv { display:flex; gap:14px; align-items:flex-start; margin:10px 0; font-size:22px; line-height:1.48; }
+.dot { width:12px; height:12px; border-radius:50%; background:#18b979; flex:0 0 12px; margin-top:12px; }
+.sec-title { display:flex; align-items:center; gap:12px; font-size:27px; font-weight:900; margin-bottom:16px; color:#0d5ccd; }
+.icon { font-size:34px; }
+.small { font-size:18px; color:#52647c; line-height:1.5; }
+.footer { position:absolute; left:52px; right:52px; bottom:24px; display:flex; justify-content:space-between; color:#61708a; font-size:17px; }
+</style></head><body>
+<div class="page" style="position:relative; min-height:1220px;">
+  <h1>Android 脱壳：不是 Dump 一下，是把运行时代码带回分析台</h1>
+  <div class="subtitle">识别保护 → 盯住加载 → 内存提取 → 修复重建 → Hash 与可用性校验</div>
+
+  <div class="grid" style="grid-template-columns:repeat(5,1fr); margin-top:38px; align-items:stretch;">
+    <div class="card" style="padding:22px; border-top:5px solid #1167e8;"><div class="sec-title">01 识别</div><p class="small">壳特征、异常入口、ClassLoader、加固 SDK、匿名 RX</p></div>
+    <div class="card" style="padding:22px; border-top:5px solid #18b979;"><div class="sec-title" style="color:#0a8f5a;">02 跟踪</div><p class="small">attachBaseContext、dlopen、构造器、DEX/ELF 映射时机</p></div>
+    <div class="card" style="padding:22px; border-top:5px solid #f08c00;"><div class="sec-title" style="color:#c66c00;">03 Dump</div><p class="small">DEX、OAT/VDEX、SO、匿名可执行内存与元数据</p></div>
+    <div class="card" style="padding:22px; border-top:5px solid #7c3aed;"><div class="sec-title" style="color:#6d28d9;">04 修复</div><p class="small">header、map、section、重定位、导入、方法体与结构恢复</p></div>
+    <div class="card" style="padding:22px; border-top:5px solid #d9485f;"><div class="sec-title" style="color:#c23049;">05 验证</div><p class="small">SHA-256、manifest、反编译、重载、交叉引用与行为对照</p></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr; margin-top:28px;">
+    <div class="card" style="padding:28px;">
+      <div class="sec-title">它能把哪些模块串起来</div>
+      <div class="kv"><span class="dot"></span><div><b>入口识别：</b><code>apk-protection-analysis</code> + <code>android-static-analysis</code></div></div>
+      <div class="kv"><span class="dot"></span><div><b>加载跟踪：</b><code>apk-classloader-tracing</code> + <code>constructor-dlopen-tracing</code></div></div>
+      <div class="kv"><span class="dot"></span><div><b>内存提取：</b><code>dex-memory-dump</code> + <code>memdumper-artifact-validation</code></div></div>
+      <div class="kv"><span class="dot"></span><div><b>重建校验：</b><code>dump-fix-rebuild</code> + <code>dexfixer-reconstruction</code></div></div>
+    </div>
+    <div class="card" style="padding:28px; background:#fffaf2;">
+      <div class="sec-title" style="color:#c66c00;">为什么它比“给个脚本”更值钱</div>
+      <div class="kv"><span class="dot" style="background:#f08c00;"></span><div>脚本只负责一次提取，流程负责判断<strong>何时提、提什么、怎么证明可用</strong>。</div></div>
+      <div class="kv"><span class="dot" style="background:#f08c00;"></span><div>自动反编译只给线索，manifest、hash 和运行时证据才能形成交付。</div></div>
+      <div class="kv"><span class="dot" style="background:#f08c00;"></span><div>遇到 anti-Frida、完整性校验、匿名 RX，还能继续路由到对应专项。</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:28px; padding:26px; background:#0b1220; color:#d7e7ff;">
+    <div style="font-size:25px;font-weight:900;color:#fff;margin-bottom:14px;">交付物不是一个孤零零的 dump.dex</div>
+    <pre style="font-size:19px;line-height:1.55;margin:0;">evidence/raw/       原始 APK、运行日志、内存映射
+evidence/derived/   DEX / SO / 修复产物
+dump-manifest.json  地址、大小、来源、SHA-256
+notes/timeline.md   加载与提取时间线
+report.md           壳判断、证据、限制、下一步</pre>
+  </div>
+  <div class="footer"><span>Dump 是动作，恢复可分析性才是目标</span><span>r0crawl_skills · Android unpacking route</span></div>
+</div>
+</body></html>

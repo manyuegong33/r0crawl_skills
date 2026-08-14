@@ -1,0 +1,4 @@
+interface:
+  display_name: "CTF Reverse Pivot Control"
+  short_description: "Prevent tunnel vision and force evidence-based pivots"
+  default_prompt: "Use -reverse-pivot-control to triage this reversing challenge and choose the next evidence-producing experiment."

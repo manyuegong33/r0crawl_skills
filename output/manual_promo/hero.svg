@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#0a1020"/>
+        <stop offset="50%" stop-color="#101a34"/>
+        <stop offset="100%" stop-color="#081120"/>
+      </linearGradient>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#2f7dff"/>
+        <stop offset="100%" stop-color="#5eead4"/>
+      </linearGradient>
+      <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1d2d5a" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#0d1530" stop-opacity="0.6"/>
+      </linearGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/>
+      </filter>
+      <style>
+body { margin:0; background:#0b1020; }
+svg { display:block; font-family: 'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif; }
+.t1 { font-size:56px; font-weight:900; fill:#ffffff; }
+.t2 { font-size:22px; fill:#c9d7ff; }
+.t3 { font-size:20px; fill:#dce6ff; }
+.t4 { font-size:18px; fill:#8ea4d6; }
+.card { fill:#111a33; stroke:#27345f; stroke-width:2; rx:22; ry:22; }
+.soft { fill:#0f1730; stroke:#283760; stroke-width:2; rx:20; ry:20; }
+.whitecard { fill:#f8fbff; stroke:#d7e1f7; stroke-width:2; rx:22; ry:22; }
+.blue { fill:#2f7dff; }
+.green { fill:#19c37d; }
+.orange { fill:#ff9f1a; }
+.purple { fill:#8b5cf6; }
+.mint { fill:#5eead4; }
+.line { stroke:#355081; stroke-width:2; }
+.small { font-size:16px; fill:#b6c6ea; }
+.chip { fill:#132042; stroke:#37508b; stroke-width:1.5; rx:999; ry:999; }
+.chip2 { fill:#12283a; stroke:#2a5a7c; stroke-width:1.5; rx:999; ry:999; }
+.label { font-size:17px; font-weight:700; fill:#dfe8ff; }
+.num { font-size:64px; font-weight:900; fill:#ffffff; }
+.k { font-size:26px; font-weight:900; fill:#ffffff; }
+.p { font-size:19px; fill:#c6d5ff; }
+</style>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#bg)"/>
+    <circle cx="1400" cy="130" r="180" fill="#2f7dff" opacity="0.10"/>
+    <circle cx="1260" cy="1030" r="220" fill="#19c37d" opacity="0.08"/>
+    <circle cx="170" cy="940" r="220" fill="#8b5cf6" opacity="0.10"/>
+    <text x="800" y="88" text-anchor="middle" class="t1">r0crawl_skills：不是技能合集，是逆向作战系统</text><text x="800" y="136" text-anchor="middle" class="t2">把 Web / Android / Native / 协议 / 脱壳 / 反分析 / 恶意样本 / 固件 / CTF 串成一套可路由、可验证、可复现的流程</text><rect x="70" y="185" width="1460" height="118" rx="22" ry="22" fill="#0f1730" stroke="#31456f" stroke-width="2" filter="url(#shadow)"/><text x="112" y="247" font-size="44">🚀</text><text x="180" y="236" class="k">一句话吹爆：</text><text x="360" y="236" class="t3">它把散装的逆向经验，压缩成 Agent 可以直接开干的战术系统。</text><text x="180" y="271" class="t3">不是“看文档”，而是“先定目标 → 再选路由 → 再沉淀证据 → 最后交付复现结果”。</text><rect x="70" y="338" width="332" height="190" rx="22" ry="22" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><text x="96" y="416" font-size="66" font-weight="900" fill="#2f7dff">196</text><text x="96" y="464" font-size="26" font-weight="900" fill="#ffffff">专业逆向模块</text><text x="96" y="498" class="p">覆盖面已经不是“多”，而是“全链路可打”。</text><rect x="420" y="338" width="332" height="190" rx="22" ry="22" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><text x="446" y="416" font-size="66" font-weight="900" fill="#19c37d">218</text><text x="446" y="464" font-size="26" font-weight="900" fill="#ffffff">Markdown 知识文件</text><text x="446" y="498" class="p">按主题组织，适合 Agent 检索和人类阅读。</text><rect x="770" y="338" width="332" height="190" rx="22" ry="22" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><text x="796" y="416" font-size="66" font-weight="900" fill="#ff9f1a">16</text><text x="796" y="464" font-size="26" font-weight="900" fill="#ffffff">轻量脚本工具</text><text x="796" y="498" class="p">建案、哈希、HAR、比对、报告、模板，直接补齐工程手感。</text><rect x="1120" y="338" width="410" height="190" rx="22" ry="22" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><text x="1146" y="416" font-size="66" font-weight="900" fill="#8b5cf6">10</text><text x="1146" y="464" font-size="26" font-weight="900" fill="#ffffff">Playbook</text><text x="1146" y="498" class="p">把典型逆向路线做成能照着跑的样板。</text><rect x="70" y="560" width="1460" height="528" rx="24" ry="24" fill="#0f1730" stroke="#31456f" stroke-width="2" filter="url(#shadow)"/><text x="100" y="613" font-size="28" font-weight="900" fill="#ffffff">🔥 它为什么猛</text><circle cx="122" cy="652" r="10" fill="#2f7dff"/><text x="150" y="659" font-size="22" font-weight="900" fill="#ffffff">小白优先</text><text x="290" y="659" font-size="20" fill="#c6d5ff">先问目标、动作、材料、产物，再决定路线。</text><circle cx="122" cy="740" r="10" fill="#19c37d"/><text x="150" y="747" font-size="22" font-weight="900" fill="#ffffff">证据优先</text><text x="290" y="747" font-size="20" fill="#c6d5ff">HAR、PCAP、dump、日志、截图、样本全部沉淀进 case。</text><circle cx="122" cy="828" r="10" fill="#ff9f1a"/><text x="150" y="835" font-size="22" font-weight="900" fill="#ffffff">路由优先</text><text x="290" y="835" font-size="20" fill="#c6d5ff">不是梭哈所有模块，而是加载最匹配的一小撮。</text><circle cx="122" cy="916" r="10" fill="#8b5cf6"/><text x="150" y="923" font-size="22" font-weight="900" fill="#ffffff">复现优先</text><text x="290" y="923" font-size="20" fill="#c6d5ff">结果要落到 parity、fixture、hash、report。</text><text x="100" y="980" font-size="28" font-weight="900" fill="#ffffff">覆盖面</text><rect x="100" y="1010" width="170" height="42" rx="999" ry="999" fill="#132042" stroke="#37508b" stroke-width="1.5"/><text x="185.0" y="1037.0" text-anchor="middle" font-size="18" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">Web / JS</text><rect x="250" y="1010" width="170" height="42" rx="999" ry="999" fill="#132042" stroke="#37508b" stroke-width="1.5"/><text x="335.0" y="1037.0" text-anchor="middle" font-size="18" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">Android / iOS</text><rect x="460" y="1010" width="170" height="42" rx="999" ry="999" fill="#132042" stroke="#37508b" stroke-width="1.5"/><text x="545.0" y="1037.0" text-anchor="middle" font-size="18" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">Native / Protocol</text><rect x="700" y="1010" width="170" height="42" rx="999" ry="999" fill="#132042" stroke="#37508b" stroke-width="1.5"/><text x="785.0" y="1037.0" text-anchor="middle" font-size="18" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">Malware / IoT</text><rect x="905" y="1010" width="170" height="42" rx="999" ry="999" fill="#132042" stroke="#37508b" stroke-width="1.5"/><text x="990.0" y="1037.0" text-anchor="middle" font-size="18" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">Frida</text><rect x="1020" y="1010" width="135" height="42" rx="999" ry="999" fill="#132042" stroke="#37508b" stroke-width="1.5"/><text x="1087.5" y="1037.0" text-anchor="middle" font-size="18" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">脱壳</text><rect x="1120" y="1010" width="135" height="42" rx="999" ry="999" fill="#132042" stroke="#37508b" stroke-width="1.5"/><text x="1187.5" y="1037.0" text-anchor="middle" font-size="18" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">反分析</text><rect x="1240" y="1010" width="135" height="42" rx="999" ry="999" fill="#132042" stroke="#37508b" stroke-width="1.5"/><text x="1307.5" y="1037.0" text-anchor="middle" font-size="18" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">CTF</text>
+    </svg>

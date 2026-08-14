@@ -35,10 +35,13 @@
 | `cloud-api-reversing` | | |
 | `constructor-dlopen-tracing` | | |
 | `coverage-guided-reversing` | | |
+| `cpython-runtime-introspection` | Inspect embedded or packaged CPython processes at runtime by tracing child processes, acquiring the GIL, injecting Python, replacing builtins.input, walking frame.f_back, exporting frame code objects, locals, globals, and disassembly, and hooking PyEval or marshal boundaries. Use when static extraction misses executed logic or when Python behavior is visible only in memory. |
 | `crash-dump-symbolication` | | |
 | `crc-integrity-analysis` | | |
 | `cross-platform-re-lab` | | |
 | `crypto-dataflow-analysis` | | |
+| `ctf-key-recovery` | Reconstruct CTF key, serial, and flag verifiers using known plaintext, repeating XOR, encoded constants, bytecode replacement, hash constraints, SMT, and bounded brute force. Use when a reverse challenge requests a key or serial and the verifier or encrypted target bytes can be recovered statically or dynamically. |
+| `ctf-reverse-pivot-control` | Evidence-driven pivot control for CTF reverse engineering. Use when analysis is stuck, the apparent entry point is a decoy, static and runtime observations disagree, a packed or embedded-language target is being treated as pure native code, or repeated experiments are not reducing uncertainty. |
 | `ctf-reversing` | | |
 | `ctf-sandbox-orchestration` | | |
 | `database-protocol-reversing` | | |
@@ -117,6 +120,7 @@
 | `protobuf-schema-recovery` | | |
 | `protocol-reconstruction` | | |
 | `proxy-traffic-analysis` | | |
+| `python-frozen-app-reversing` | Recover logic from PyInstaller, cx_Freeze, py2exe, Nuitka, and other frozen Python applications, including modified bootloaders, decoy entry scripts, patched frozen standard-library modules, embedded marshal code objects, and logic hidden inside pythonXY.dll or libpython. Use for packaged Python executables, MEI overlays, PYZ archives, suspicious .pyc files, or runtime behavior missing from extracted scripts. |
 | `quickapp-reversing` | | |
 | `react-native-reversing` | | |
 | `reconstruction-and-parity` | | |

@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: localCN; src: local("Microsoft YaHei"); }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; color:#101827; background:#f6f9ff; }
+.page { width:1600px; min-height:1100px; padding:44px 52px; background:
+  radial-gradient(circle at 8% 0%, rgba(41,121,255,.16), transparent 30%),
+  radial-gradient(circle at 95% 12%, rgba(0,194,168,.14), transparent 30%),
+  linear-gradient(135deg,#f8fbff 0%,#ffffff 45%,#f8fbff 100%); }
+h1 { margin:0; text-align:center; font-size:48px; line-height:1.18; letter-spacing:0; font-weight:900; }
+.subtitle { margin-top:14px; text-align:center; font-size:22px; color:#39506e; }
+.repo { color:#1167e8; font-weight:800; }
+.card { background:rgba(255,255,255,.88); border:1px solid rgba(102,144,197,.24); box-shadow:0 18px 50px rgba(29,78,137,.10); border-radius:18px; }
+.badge { display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:9px 16px; background:#e9f2ff; color:#0f61cc; font-weight:800; font-size:18px; }
+.grid { display:grid; gap:22px; }
+.kv { display:flex; gap:14px; align-items:flex-start; margin:10px 0; font-size:22px; line-height:1.48; }
+.dot { width:12px; height:12px; border-radius:50%; background:#18b979; flex:0 0 12px; margin-top:12px; }
+.sec-title { display:flex; align-items:center; gap:12px; font-size:27px; font-weight:900; margin-bottom:16px; color:#0d5ccd; }
+.icon { font-size:34px; }
+.small { font-size:18px; color:#52647c; line-height:1.5; }
+.footer { position:absolute; left:52px; right:52px; bottom:24px; display:flex; justify-content:space-between; color:#61708a; font-size:17px; }
+</style></head><body>
+<div class="page" style="position:relative; min-height:1180px;">
+  <h1>r0crawl_skills 工作流：让逆向从玄学变成工程</h1>
+  <div class="subtitle">不是“想到哪查到哪”，而是“每一步都有证据、有产物、有验收”</div>
+  <div class="card" style="margin-top:34px; padding:28px;">
+    <div class="sec-title">🧭 1. 小白启动四问</div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px; text-align:center;">
+      <div class="card" style="padding:24px;background:#f5f9ff;"><div style="font-size:40px;">🎯</div><b>分析什么？</b><br><span class="small">网页 / JS / APK / DEX / SO / PCAP / 固件</span></div>
+      <div class="card" style="padding:24px;background:#f7fff9;"><div style="font-size:40px;">⚙️</div><b>关键动作？</b><br><span class="small">登录 / 搜索 / 上传 / 支付 / 加密 / 校验</span></div>
+      <div class="card" style="padding:24px;background:#fffaf0;"><div style="font-size:40px;">📦</div><b>已有材料？</b><br><span class="small">文件 / URL / HAR / PCAP / log / dump</span></div>
+      <div class="card" style="padding:24px;background:#fbf7ff;"><div style="font-size:40px;">🏁</div><b>想要产物？</b><br><span class="small">入口 / hook / dump / 算法 / 报告</span></div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:26px;">
+    <div class="card" style="padding:24px;"><div class="sec-title">📁 2. 建案</div><pre style="font-size:18px;line-height:1.55;background:#0b1220;color:#d7e7ff;border-radius:14px;padding:18px;">case/
+  case.yaml
+  evidence/raw/
+  evidence/derived/
+  notes/timeline.md
+  tests/fixtures.jsonl
+  report.md</pre></div>
+    <div class="card" style="padding:24px;"><div class="sec-title">🔀 3. 路由</div><p style="font-size:22px;line-height:1.55;">APK 就走 Android + 脱壳；sign 就走 WebCrypto + parity；PCAP 就走协议重建；Frida 被杀就走反检测链。<b>少加载、准命中、快推进。</b></p></div>
+    <div class="card" style="padding:24px;"><div class="sec-title">✅ 4. 验证</div><p style="font-size:22px;line-height:1.55;">自动反编译只是线索；Hook 日志、请求差异、fixture 比对、hash manifest、报告附录，才是能交付的结果。</p></div>
+  </div>
+
+  <div class="card" style="margin-top:28px; padding:28px; background:linear-gradient(120deg,#eff6ff,#ffffff,#ecfdf5);">
+    <div class="sec-title">🛠️ 5. 自带轻量工具箱</div>
+    <div style="display:flex; flex-wrap:wrap; gap:13px;">
+      <span class="badge">init_case.py</span><span class="badge">module_router.py</span><span class="badge">hash_artifact.py</span><span class="badge">scan_strings.py</span><span class="badge">parse_har_fields.py</span><span class="badge">compare_jsonl.py</span><span class="badge">redact_capture.py</span><span class="badge">validate_dump_manifest.py</span><span class="badge">generate_report.py</span><span class="badge">js_hook_template.js</span><span class="badge">frida_observe_template.js</span><span class="badge">ida_export_template.py</span>
+    </div>
+  </div>
+  <div class="card" style="margin-top:26px; padding:24px; display:flex; gap:20px; align-items:center;">
+    <div style="font-size:48px;">🏆</div>
+    <div style="font-size:26px; line-height:1.45;"><b>总结：</b>r0crawl_skills 最强的地方，是把“个人经验”压成“可复用流程”，把“逆向玄学”压成“证据驱动工程”。一个人开工，也能像一个小型逆向团队在推进。</div>
+  </div>
+  <div class="footer"><span>从采集、路由、分析、复现到报告：闭环才是生产力</span><span>生成时间：2026-08-10</span></div>
+</div>
+</body></html>

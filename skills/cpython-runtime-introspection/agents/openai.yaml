@@ -1,0 +1,4 @@
+interface:
+  display_name: "CPython Runtime Introspection"
+  short_description: "Inspect live frames, code objects, and hidden modules"
+  default_prompt: "Use -runtime-introspection to inspect a running embedded CPython process and export hidden code objects."

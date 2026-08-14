@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#0a1020"/>
+        <stop offset="50%" stop-color="#101a34"/>
+        <stop offset="100%" stop-color="#081120"/>
+      </linearGradient>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#2f7dff"/>
+        <stop offset="100%" stop-color="#5eead4"/>
+      </linearGradient>
+      <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1d2d5a" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#0d1530" stop-opacity="0.6"/>
+      </linearGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/>
+      </filter>
+      <style>
+body { margin:0; background:#0b1020; }
+svg { display:block; font-family: 'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif; }
+.t1 { font-size:56px; font-weight:900; fill:#ffffff; }
+.t2 { font-size:22px; fill:#c9d7ff; }
+.t3 { font-size:20px; fill:#dce6ff; }
+.t4 { font-size:18px; fill:#8ea4d6; }
+.card { fill:#111a33; stroke:#27345f; stroke-width:2; rx:22; ry:22; }
+.soft { fill:#0f1730; stroke:#283760; stroke-width:2; rx:20; ry:20; }
+.whitecard { fill:#f8fbff; stroke:#d7e1f7; stroke-width:2; rx:22; ry:22; }
+.blue { fill:#2f7dff; }
+.green { fill:#19c37d; }
+.orange { fill:#ff9f1a; }
+.purple { fill:#8b5cf6; }
+.mint { fill:#5eead4; }
+.line { stroke:#355081; stroke-width:2; }
+.small { font-size:16px; fill:#b6c6ea; }
+.chip { fill:#132042; stroke:#37508b; stroke-width:1.5; rx:999; ry:999; }
+.chip2 { fill:#12283a; stroke:#2a5a7c; stroke-width:1.5; rx:999; ry:999; }
+.label { font-size:17px; font-weight:700; fill:#dfe8ff; }
+.num { font-size:64px; font-weight:900; fill:#ffffff; }
+.k { font-size:26px; font-weight:900; fill:#ffffff; }
+.p { font-size:19px; fill:#c6d5ff; }
+</style>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#bg)"/>
+    <circle cx="1400" cy="130" r="180" fill="#2f7dff" opacity="0.10"/>
+    <circle cx="1260" cy="1030" r="220" fill="#19c37d" opacity="0.08"/>
+    <circle cx="170" cy="940" r="220" fill="#8b5cf6" opacity="0.10"/>
+    <text x="800" y="88" text-anchor="middle" class="t1">r0crawl_skills 的工作流：把逆向从玄学拉回工程</text><text x="800" y="136" text-anchor="middle" class="t2">每一步都留证据、留中间产物、留验证路径，不靠拍脑袋</text><rect x="90" y="220" width="280" height="430" rx="24" ry="24" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><circle cx="230" cy="300" r="54" fill="#2f7dff"/><text x="230" y="318" text-anchor="middle" font-size="44" font-weight="900" fill="#ffffff">1</text><text x="230" y="340" text-anchor="middle" font-size="28" font-weight="900" fill="#ffffff">四问启动</text><text x="230" y="390" text-anchor="middle" font-size="19" fill="#c6d5ff">分析什么 / 动作是什么 / 现有材料是什么 / 结果想要什么</text><rect x="470" y="220" width="280" height="430" rx="24" ry="24" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><circle cx="610" cy="300" r="54" fill="#19c37d"/><text x="610" y="318" text-anchor="middle" font-size="44" font-weight="900" fill="#ffffff">2</text><text x="610" y="340" text-anchor="middle" font-size="28" font-weight="900" fill="#ffffff">建案采证</text><text x="610" y="390" text-anchor="middle" font-size="19" fill="#c6d5ff">case、timeline、raw/</text><text x="610" y="420" text-anchor="middle" font-size="19" fill="#c6d5ff">derived、hash、manif</text><text x="610" y="450" text-anchor="middle" font-size="19" fill="#c6d5ff">est 先立住</text><rect x="850" y="220" width="280" height="430" rx="24" ry="24" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><circle cx="990" cy="300" r="54" fill="#ff9f1a"/><text x="990" y="318" text-anchor="middle" font-size="44" font-weight="900" fill="#ffffff">3</text><text x="990" y="340" text-anchor="middle" font-size="28" font-weight="900" fill="#ffffff">模块路由</text><text x="990" y="390" text-anchor="middle" font-size="19" fill="#c6d5ff">按目标匹配最小模块集，而不是盲目全量加载</text><rect x="1230" y="220" width="280" height="430" rx="24" ry="24" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><circle cx="1370" cy="300" r="54" fill="#8b5cf6"/><text x="1370" y="318" text-anchor="middle" font-size="44" font-weight="900" fill="#ffffff">4</text><text x="1370" y="340" text-anchor="middle" font-size="28" font-weight="900" fill="#ffffff">复现交付</text><text x="1370" y="390" text-anchor="middle" font-size="19" fill="#c6d5ff">parity、fixture、rep</text><text x="1370" y="420" text-anchor="middle" font-size="19" fill="#c6d5ff">ort、next action 一起</text><text x="1370" y="450" text-anchor="middle" font-size="19" fill="#c6d5ff">收口</text><line x1="370" y1="435" x2="470" y2="435" stroke="#4b6faf" stroke-width="6" stroke-linecap="round"/><polygon points="458,425 480,435 458,445" fill="#4b6faf"/><line x1="750" y1="435" x2="850" y2="435" stroke="#4b6faf" stroke-width="6" stroke-linecap="round"/><polygon points="838,425 860,435 838,445" fill="#4b6faf"/><line x1="1130" y1="435" x2="1230" y2="435" stroke="#4b6faf" stroke-width="6" stroke-linecap="round"/><polygon points="1218,425 1240,435 1218,445" fill="#4b6faf"/><rect x="70" y="700" width="1460" height="300" rx="24" ry="24" fill="#0f1730" stroke="#31456f" stroke-width="2" filter="url(#shadow)"/><text x="100" y="758" font-size="28" font-weight="900" fill="#ffffff">随身工具箱</text><rect x="100" y="800" width="170" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="185.0" y="826.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">init_case.py</text><rect x="284" y="800" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="389.0" y="826.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">module_router.py</text><rect x="508" y="800" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="613.0" y="826.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">hash_artifact.py</text><rect x="732" y="800" width="170" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="817.0" y="826.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">scan_strings.py</text><rect x="916" y="800" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="1021.0" y="826.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">parse_har_fields.py</text><rect x="1140" y="800" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="1245.0" y="826.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">compare_jsonl.py</text><rect x="100" y="854" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="205.0" y="880.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">redact_capture.py</text><rect x="324" y="854" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="429.0" y="880.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">validate_dump_manifest.py</text><rect x="548" y="854" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="653.0" y="880.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">generate_report.py</text><rect x="772" y="854" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="877.0" y="880.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">js_hook_template.js</text><rect x="996" y="854" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="1101.0" y="880.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">frida_observe_template.js</text><rect x="1220" y="854" width="210" height="40" rx="999" ry="999" fill="#12213e" stroke="#355082" stroke-width="1.5"/><text x="1325.0" y="880.0" text-anchor="middle" font-size="16" fill="#dfe8ff" font-weight="700" font-family="Microsoft YaHei">ida_export_template.py</text><text x="100" y="980" font-size="26" font-weight="900" fill="#ffffff">总结：</text><text x="220" y="980" font-size="24" fill="#c6d5ff">把经验压成流程，把流程压成模块，把模块压成可复现的结果。</text>
+    </svg>

@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: localCN; src: local("Microsoft YaHei"); }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; color:#101827; background:#f6f9ff; }
+.page { width:1600px; min-height:1100px; padding:44px 52px; background:
+  radial-gradient(circle at 8% 0%, rgba(41,121,255,.16), transparent 30%),
+  radial-gradient(circle at 95% 12%, rgba(0,194,168,.14), transparent 30%),
+  linear-gradient(135deg,#f8fbff 0%,#ffffff 45%,#f8fbff 100%); }
+h1 { margin:0; text-align:center; font-size:48px; line-height:1.18; letter-spacing:0; font-weight:900; }
+.subtitle { margin-top:14px; text-align:center; font-size:22px; color:#39506e; }
+.repo { color:#1167e8; font-weight:800; }
+.card { background:rgba(255,255,255,.88); border:1px solid rgba(102,144,197,.24); box-shadow:0 18px 50px rgba(29,78,137,.10); border-radius:18px; }
+.badge { display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:9px 16px; background:#e9f2ff; color:#0f61cc; font-weight:800; font-size:18px; }
+.grid { display:grid; gap:22px; }
+.kv { display:flex; gap:14px; align-items:flex-start; margin:10px 0; font-size:22px; line-height:1.48; }
+.dot { width:12px; height:12px; border-radius:50%; background:#18b979; flex:0 0 12px; margin-top:12px; }
+.sec-title { display:flex; align-items:center; gap:12px; font-size:27px; font-weight:900; margin-bottom:16px; color:#0d5ccd; }
+.icon { font-size:34px; }
+.small { font-size:18px; color:#52647c; line-height:1.5; }
+.footer { position:absolute; left:52px; right:52px; bottom:24px; display:flex; justify-content:space-between; color:#61708a; font-size:17px; }
+</style></head><body>
+<div class="page" style="position:relative; min-height:1220px;">
+  <h1>抓包与协议重建：从“看到请求”一路追到“解释每个字节”</h1>
+  <div class="subtitle">HAR / PCAP / TLS / WebSocket / gRPC / Protobuf，一条证据链收口</div>
+
+  <div class="card" style="margin-top:38px; padding:30px;">
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:12px;align-items:center;text-align:center;">
+      <div class="card" style="padding:20px;background:#f2f7ff;"><b>触发动作</b><p class="small">登录 / 搜索 / 下单</p></div>
+      <div style="font-size:32px;color:#1167e8;">→</div>
+      <div class="card" style="padding:20px;background:#f2fff9;"><b>采集流量</b><p class="small">HAR / PCAP / proxy</p></div>
+      <div style="font-size:32px;color:#18b979;">→</div>
+      <div class="card" style="padding:20px;background:#fff9ee;"><b>分层解析</b><p class="small">TLS / HTTP / WS</p></div>
+      <div style="font-size:32px;color:#f08c00;">→</div>
+      <div class="card" style="padding:20px;background:#faf5ff;"><b>重放验证</b><p class="small">字段 / 时序 / 状态</p></div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:repeat(3,1fr); margin-top:28px;">
+    <div class="card" style="padding:27px;">
+      <div class="sec-title">浏览器抓包</div>
+      <div class="kv"><span class="dot"></span><div>DevTools、HAR、XHR/fetch、WebSocket 帧</div></div>
+      <div class="kv"><span class="dot"></span><div>Worker、iframe、ServiceWorker、重定向链</div></div>
+      <div class="kv"><span class="dot"></span><div>请求头、cookie、body、响应与 initiator 对齐</div></div>
+    </div>
+    <div class="card" style="padding:27px;">
+      <div class="sec-title" style="color:#0a8f5a;">移动端抓包</div>
+      <div class="kv"><span class="dot"></span><div>代理、证书、TLS Pinning、OkHttp、Cronet</div></div>
+      <div class="kv"><span class="dot"></span><div>Java 与 Native 网络栈交叉观察</div></div>
+      <div class="kv"><span class="dot"></span><div>mitmproxy、Burp、tshark、eCapture 证据互证</div></div>
+    </div>
+    <div class="card" style="padding:27px;">
+      <div class="sec-title" style="color:#6d28d9;">私有协议</div>
+      <div class="kv"><span class="dot"></span><div>TCP/UDP 会话、长度字段、消息边界、心跳</div></div>
+      <div class="kv"><span class="dot"></span><div>gRPC / Protobuf schema 恢复与字段猜测</div></div>
+      <div class="kv"><span class="dot"></span><div>样本聚类、差分、重放、状态机重建</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:28px;padding:28px;background:linear-gradient(90deg,#f2f7ff,#fff,#f2fff9);">
+    <div class="sec-title">最关键的能力：把流量变成可验证的协议说明</div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;text-align:center;font-size:19px;">
+      <div><b>基线样本</b><br><span class="small">一次只改一个变量</span></div>
+      <div><b>字段归因</b><br><span class="small">来源 / 类型 / 生命周期</span></div>
+      <div><b>时序恢复</b><br><span class="small">前置请求 / 状态依赖</span></div>
+      <div><b>主动重放</b><br><span class="small">删改换字段看响应</span></div>
+      <div><b>结果固化</b><br><span class="small">fixture / schema / report</span></div>
+    </div>
+  </div>
+  <div class="footer"><span>抓到包只是起点，能解释、能重放、能复现才算完成</span><span>r0crawl_skills · protocol route</span></div>
+</div>
+</body></html>

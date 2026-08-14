@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: localCN; src: local("Microsoft YaHei"); }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; color:#101827; background:#f6f9ff; }
+.page { width:1600px; min-height:1100px; padding:44px 52px; background:
+  radial-gradient(circle at 8% 0%, rgba(41,121,255,.16), transparent 30%),
+  radial-gradient(circle at 95% 12%, rgba(0,194,168,.14), transparent 30%),
+  linear-gradient(135deg,#f8fbff 0%,#ffffff 45%,#f8fbff 100%); }
+h1 { margin:0; text-align:center; font-size:48px; line-height:1.18; letter-spacing:0; font-weight:900; }
+.subtitle { margin-top:14px; text-align:center; font-size:22px; color:#39506e; }
+.repo { color:#1167e8; font-weight:800; }
+.card { background:rgba(255,255,255,.88); border:1px solid rgba(102,144,197,.24); box-shadow:0 18px 50px rgba(29,78,137,.10); border-radius:18px; }
+.badge { display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:9px 16px; background:#e9f2ff; color:#0f61cc; font-weight:800; font-size:18px; }
+.grid { display:grid; gap:22px; }
+.kv { display:flex; gap:14px; align-items:flex-start; margin:10px 0; font-size:22px; line-height:1.48; }
+.dot { width:12px; height:12px; border-radius:50%; background:#18b979; flex:0 0 12px; margin-top:12px; }
+.sec-title { display:flex; align-items:center; gap:12px; font-size:27px; font-weight:900; margin-bottom:16px; color:#0d5ccd; }
+.icon { font-size:34px; }
+.small { font-size:18px; color:#52647c; line-height:1.5; }
+.footer { position:absolute; left:52px; right:52px; bottom:24px; display:flex; justify-content:space-between; color:#61708a; font-size:17px; }
+</style></head><body>
+<div class="page" style="position:relative; min-height:1260px;">
+  <h1>r0crawl_skills 全栈逆向能力矩阵</h1>
+  <div class="subtitle">从“我有一个目标”到“我有一条证据链”，中间的路它都给你铺好</div>
+  <div class="grid" style="grid-template-columns:repeat(2,1fr); margin-top:32px;">
+    <div class="card" style="padding:26px;">
+      <div class="sec-title">🌐 Web / JS 逆向线</div>
+      <div class="kv"><span class="dot"></span><div>签名参数：sign、token、cookie、header、响应解密</div></div>
+      <div class="kv"><span class="dot"></span><div>运行时追踪：XHR/fetch/WebSocket、Worker、iframe、ServiceWorker</div></div>
+      <div class="kv"><span class="dot"></span><div>环境与指纹：canvas、WebGL、webdriver、浏览器补环境</div></div>
+      <div class="kv"><span class="dot"></span><div>厂商专项：瑞数、Akamai、Cloudflare、AWS WAF、Kasada、DataDome</div></div>
+    </div>
+    <div class="card" style="padding:26px;">
+      <div class="sec-title">📱 Android / 移动逆向线</div>
+      <div class="kv"><span class="dot"></span><div>静态分析：APK/AAB/DEX、smali、Manifest、ClassLoader</div></div>
+      <div class="kv"><span class="dot"></span><div>动态观测：Frida、Java.perform、Interceptor、adb、logcat</div></div>
+      <div class="kv"><span class="dot"></span><div>脱壳 Dump：DEX 内存提取、dump 修复、重建校验</div></div>
+      <div class="kv"><span class="dot"></span><div>对抗链：anti-Frida、Root、模拟器、TLS Pinning、完整性检测</div></div>
+    </div>
+    <div class="card" style="padding:26px;">
+      <div class="sec-title">🧩 Native / 二进制线</div>
+      <div class="kv"><span class="dot"></span><div>平台覆盖：PE、ELF、Mach-O、SO、Windows/Linux/macOS</div></div>
+      <div class="kv"><span class="dot"></span><div>工具链：IDA、Ghidra、Rizin、gdb、WinDbg、Unicorn/angr</div></div>
+      <div class="kv"><span class="dot"></span><div>恢复能力：符号恢复、结构体重建、函数边界、调用图</div></div>
+      <div class="kv"><span class="dot"></span><div>保护分析：壳、loader、匿名 RX、OLLVM、虚拟化保护</div></div>
+    </div>
+    <div class="card" style="padding:26px;">
+      <div class="sec-title">🛰️ 协议 / 样本 / 固件线</div>
+      <div class="kv"><span class="dot"></span><div>协议重建：PCAP、TCP/UDP、WebSocket、gRPC、Protobuf、GraphQL</div></div>
+      <div class="kv"><span class="dot"></span><div>恶意样本：沙箱、C2 流量、IOC、YARA/Sigma、检测工程</div></div>
+      <div class="kv"><span class="dot"></span><div>固件 IoT：binwalk、SquashFS、U-Boot、BLE、USB 协议</div></div>
+      <div class="kv"><span class="dot"></span><div>边界场景：游戏安全、反作弊内核、CTF、fuzz、crash triage</div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:28px; padding:26px; background:linear-gradient(90deg,#fff7ed,#ffffff,#eff6ff);">
+    <div class="sec-title" style="color:#db6b00;">🔥 最狠的不是“多”，而是“能串起来”</div>
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px; text-align:center;">
+      <div class="card" style="padding:18px;">采集证据<br><span class="small">raw / derived</span></div>
+      <div class="card" style="padding:18px;">选择路线<br><span class="small">triage & route</span></div>
+      <div class="card" style="padding:18px;">专项分析<br><span class="small">matched modules</span></div>
+      <div class="card" style="padding:18px;">复现比对<br><span class="small">parity fixtures</span></div>
+      <div class="card" style="padding:18px;">输出报告<br><span class="small">evidence appendix</span></div>
+    </div>
+  </div>
+  <div class="footer"><span>r0crawl_skills：逆向任务的“总参谋部 + 工具兵站 + 复盘系统”</span><span>生成时间：2026-08-10</span></div>
+</div>
+</body></html>

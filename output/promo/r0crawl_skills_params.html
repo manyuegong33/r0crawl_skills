@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: localCN; src: local("Microsoft YaHei"); }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; color:#101827; background:#f6f9ff; }
+.page { width:1600px; min-height:1100px; padding:44px 52px; background:
+  radial-gradient(circle at 8% 0%, rgba(41,121,255,.16), transparent 30%),
+  radial-gradient(circle at 95% 12%, rgba(0,194,168,.14), transparent 30%),
+  linear-gradient(135deg,#f8fbff 0%,#ffffff 45%,#f8fbff 100%); }
+h1 { margin:0; text-align:center; font-size:48px; line-height:1.18; letter-spacing:0; font-weight:900; }
+.subtitle { margin-top:14px; text-align:center; font-size:22px; color:#39506e; }
+.repo { color:#1167e8; font-weight:800; }
+.card { background:rgba(255,255,255,.88); border:1px solid rgba(102,144,197,.24); box-shadow:0 18px 50px rgba(29,78,137,.10); border-radius:18px; }
+.badge { display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:9px 16px; background:#e9f2ff; color:#0f61cc; font-weight:800; font-size:18px; }
+.grid { display:grid; gap:22px; }
+.kv { display:flex; gap:14px; align-items:flex-start; margin:10px 0; font-size:22px; line-height:1.48; }
+.dot { width:12px; height:12px; border-radius:50%; background:#18b979; flex:0 0 12px; margin-top:12px; }
+.sec-title { display:flex; align-items:center; gap:12px; font-size:27px; font-weight:900; margin-bottom:16px; color:#0d5ccd; }
+.icon { font-size:34px; }
+.small { font-size:18px; color:#52647c; line-height:1.5; }
+.footer { position:absolute; left:52px; right:52px; bottom:24px; display:flex; justify-content:space-between; color:#61708a; font-size:17px; }
+</style></head><body>
+<div class="page" style="position:relative; min-height:1220px;">
+  <h1>参数逆向：从最终请求倒推 writer、builder、entry、source</h1>
+  <div class="subtitle">sign / token / cookie / header / body，不猜算法，沿数据流拿证据</div>
+
+  <div class="card" style="margin-top:38px;padding:28px;">
+    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:12px;align-items:center;text-align:center;">
+      <div class="card" style="padding:21px;background:#fff3f5;"><b>最终请求</b><p class="small">先锁变化字段</p></div><div style="font-size:30px;">←</div>
+      <div class="card" style="padding:21px;background:#fff9ee;"><b>Writer</b><p class="small">谁写进 header/body</p></div><div style="font-size:30px;">←</div>
+      <div class="card" style="padding:21px;background:#f2fff9;"><b>Builder</b><p class="small">谁拼装输入</p></div><div style="font-size:30px;">←</div>
+      <div class="card" style="padding:21px;background:#f2f7ff;"><b>Source</b><p class="small">时间 / 随机 / 环境</p></div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr; margin-top:28px;">
+    <div class="card" style="padding:28px;">
+      <div class="sec-title">浏览器运行时定位</div>
+      <div class="kv"><span class="dot"></span><div>Hook fetch / XHR / WebSocket，先抓最终出站值。</div></div>
+      <div class="kv"><span class="dot"></span><div>沿调用栈回溯到 JSON.stringify、WebCrypto、WASM、Worker。</div></div>
+      <div class="kv"><span class="dot"></span><div>对 Date、random、storage、cookie、fingerprint 做输入归因。</div></div>
+      <div class="kv"><span class="dot"></span><div>复杂混淆切 AST，运行时差异切补环境与对齐检查点。</div></div>
+    </div>
+    <div class="card" style="padding:28px;">
+      <div class="sec-title" style="color:#0a8f5a;">移动端参数定位</div>
+      <div class="kv"><span class="dot"></span><div>从 OkHttp / Cronet 出站边界反查 Java builder。</div></div>
+      <div class="kv"><span class="dot"></span><div>跨 JNI 时记录入参、返回值、线程与 Native backtrace。</div></div>
+      <div class="kv"><span class="dot"></span><div>加密不急着命名，先确认输入序列化、key/iv、编码顺序。</div></div>
+      <div class="kv"><span class="dot"></span><div>RPC、纯算法、真机执行三条路线按成本与稳定性选型。</div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:28px;padding:28px;background:#0b1220;color:#d7e7ff;">
+    <div style="font-size:25px;font-weight:900;color:#fff;margin-bottom:16px;">参数还原的验收，不是“本地能出一个字符串”</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;">
+      <div><b style="color:#72a7ff;">固定输入</b><p>本地与原环境逐字段一致</p></div>
+      <div><b style="color:#5ee6b0;">变量控制</b><p>时间、随机数、设备字段可注入</p></div>
+      <div><b style="color:#ffc66d;">多样本 parity</b><p>正常、边界、错误样本一起过</p></div>
+      <div><b style="color:#c9a7ff;">真实请求验证</b><p>服务端响应与浏览器/真机一致</p></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:24px;padding:24px;text-align:center;font-size:25px;font-weight:900;background:#fffaf2;">
+    最值钱的不是猜中 AES、MD5 或 SM4，而是恢复“数据从哪里来、怎样变、何时写出去”的完整链路。
+  </div>
+  <div class="footer"><span>定位入口只是开始，多样本 parity 才是算法还原的终点</span><span>r0crawl_skills · parameter reversing route</span></div>
+</div>
+</body></html>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CTF Key Recovery"
+  short_description: "Recover verifier keys with constraints and known plaintext"
+  default_prompt: "Use -key-recovery to reconstruct this verifier, recover the exact key, and validate it against the challenge."

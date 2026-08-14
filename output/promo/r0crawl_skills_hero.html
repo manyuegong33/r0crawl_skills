@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: localCN; src: local("Microsoft YaHei"); }
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; color:#101827; background:#f6f9ff; }
+.page { width:1600px; min-height:1100px; padding:44px 52px; background:
+  radial-gradient(circle at 8% 0%, rgba(41,121,255,.16), transparent 30%),
+  radial-gradient(circle at 95% 12%, rgba(0,194,168,.14), transparent 30%),
+  linear-gradient(135deg,#f8fbff 0%,#ffffff 45%,#f8fbff 100%); }
+h1 { margin:0; text-align:center; font-size:48px; line-height:1.18; letter-spacing:0; font-weight:900; }
+.subtitle { margin-top:14px; text-align:center; font-size:22px; color:#39506e; }
+.repo { color:#1167e8; font-weight:800; }
+.card { background:rgba(255,255,255,.88); border:1px solid rgba(102,144,197,.24); box-shadow:0 18px 50px rgba(29,78,137,.10); border-radius:18px; }
+.badge { display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:9px 16px; background:#e9f2ff; color:#0f61cc; font-weight:800; font-size:18px; }
+.grid { display:grid; gap:22px; }
+.kv { display:flex; gap:14px; align-items:flex-start; margin:10px 0; font-size:22px; line-height:1.48; }
+.dot { width:12px; height:12px; border-radius:50%; background:#18b979; flex:0 0 12px; margin-top:12px; }
+.sec-title { display:flex; align-items:center; gap:12px; font-size:27px; font-weight:900; margin-bottom:16px; color:#0d5ccd; }
+.icon { font-size:34px; }
+.small { font-size:18px; color:#52647c; line-height:1.5; }
+.footer { position:absolute; left:52px; right:52px; bottom:24px; display:flex; justify-content:space-between; color:#61708a; font-size:17px; }
+</style></head><body>
+<div class="page" style="position:relative;">
+  <h1>r0crawl_skills：不是技能合集，是逆向工程作战系统</h1>
+  <div class="subtitle">GitHub 仓库：<span class="repo">manyuegong33/r0crawl_skills</span> · 面向 Codex Agent 的全栈逆向能力库</div>
+
+  <div class="card" style="margin-top:34px; padding:24px 30px; display:flex; align-items:center; gap:18px;">
+    <div style="font-size:42px;">✅</div>
+    <div style="font-size:25px; line-height:1.45;"><b>一句话吹爆：</b>它把 Web/JS、Android、Frida、Native、协议、脱壳、反分析、恶意样本、固件、CTF 的碎片化经验，整理成一套可路由、可验证、可复现的逆向战术体系。</div>
+  </div>
+
+  <div class="grid" style="grid-template-columns: 1.05fr .95fr; margin-top:28px;">
+    <div class="card" style="padding:28px;">
+      <div class="sec-title"><span class="icon">🚀</span>1. 项目体量：直接拉满</div>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:18px;">
+        <div class="card" style="padding:24px; background:#f6fbff;"><div style="font-size:56px;font-weight:900;color:#0d6efd;">196</div><div style="font-size:22px;font-weight:800;">专业逆向模块</div><div class="small">从入门路由到专项场景全覆盖</div></div>
+        <div class="card" style="padding:24px; background:#f7fff9;"><div style="font-size:56px;font-weight:900;color:#11a36a;">218</div><div style="font-size:22px;font-weight:800;">Markdown 知识文件</div><div class="small">结构化、可检索、可持续扩展</div></div>
+        <div class="card" style="padding:24px; background:#fff9f0;"><div style="font-size:56px;font-weight:900;color:#f08c00;">16</div><div style="font-size:22px;font-weight:800;">轻量脚本工具</div><div class="small">建案、哈希、字符串、HAR、比对、报告</div></div>
+        <div class="card" style="padding:24px; background:#fbf7ff;"><div style="font-size:56px;font-weight:900;color:#7c3aed;">10</div><div style="font-size:22px;font-weight:800;">实战 Playbook</div><div class="small">签名、DEX、Frida、PCAP、恶意样本、固件</div></div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:28px; background:linear-gradient(160deg,#ffffff,#f4fff9);">
+      <div class="sec-title" style="color:#0a8f5a;"><span class="icon">🧠</span>2. 核心气质：不堆术语，先把仗打明白</div>
+      <div class="kv"><span class="dot"></span><div><b>小白优先：</b>先问目标、动作、材料、产物，再决定路线。</div></div>
+      <div class="kv"><span class="dot"></span><div><b>证据优先：</b>样本、HAR、PCAP、日志、dump 都沉淀到 case。</div></div>
+      <div class="kv"><span class="dot"></span><div><b>路由优先：</b>不是一上来梭哈，而是按信号加载最小模块集。</div></div>
+      <div class="kv"><span class="dot"></span><div><b>复现优先：</b>最终落到 parity、fixtures、报告和下一步动作。</div></div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns: repeat(4,1fr); margin-top:24px;">
+    <div class="card" style="padding:22px;"><div class="badge">Web / JS</div><p class="small">sign、token、cookie、WebCrypto、JSVMP、WASM、浏览器环境</p></div>
+    <div class="card" style="padding:22px;"><div class="badge">Android / iOS</div><p class="small">APK、DEX、SO、Frida、Root/模拟器检测、TLS Pinning</p></div>
+    <div class="card" style="padding:22px;"><div class="badge">Native / Protocol</div><p class="small">PE/ELF/Mach-O、IDA/Ghidra、PCAP、gRPC、Protobuf</p></div>
+    <div class="card" style="padding:22px;"><div class="badge">Malware / IoT</div><p class="small">恶意样本、检测规则、固件、BLE/USB、内核与反分析</p></div>
+  </div>
+  <div class="footer"><span>生成时间：2026-08-10</span></div>
+</div>
+</body></html>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#0a1020"/>
+        <stop offset="50%" stop-color="#101a34"/>
+        <stop offset="100%" stop-color="#081120"/>
+      </linearGradient>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#2f7dff"/>
+        <stop offset="100%" stop-color="#5eead4"/>
+      </linearGradient>
+      <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1d2d5a" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#0d1530" stop-opacity="0.6"/>
+      </linearGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/>
+      </filter>
+      <style>
+body { margin:0; background:#0b1020; }
+svg { display:block; font-family: 'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif; }
+.t1 { font-size:56px; font-weight:900; fill:#ffffff; }
+.t2 { font-size:22px; fill:#c9d7ff; }
+.t3 { font-size:20px; fill:#dce6ff; }
+.t4 { font-size:18px; fill:#8ea4d6; }
+.card { fill:#111a33; stroke:#27345f; stroke-width:2; rx:22; ry:22; }
+.soft { fill:#0f1730; stroke:#283760; stroke-width:2; rx:20; ry:20; }
+.whitecard { fill:#f8fbff; stroke:#d7e1f7; stroke-width:2; rx:22; ry:22; }
+.blue { fill:#2f7dff; }
+.green { fill:#19c37d; }
+.orange { fill:#ff9f1a; }
+.purple { fill:#8b5cf6; }
+.mint { fill:#5eead4; }
+.line { stroke:#355081; stroke-width:2; }
+.small { font-size:16px; fill:#b6c6ea; }
+.chip { fill:#132042; stroke:#37508b; stroke-width:1.5; rx:999; ry:999; }
+.chip2 { fill:#12283a; stroke:#2a5a7c; stroke-width:1.5; rx:999; ry:999; }
+.label { font-size:17px; font-weight:700; fill:#dfe8ff; }
+.num { font-size:64px; font-weight:900; fill:#ffffff; }
+.k { font-size:26px; font-weight:900; fill:#ffffff; }
+.p { font-size:19px; fill:#c6d5ff; }
+</style>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#bg)"/>
+    <circle cx="1400" cy="130" r="180" fill="#2f7dff" opacity="0.10"/>
+    <circle cx="1260" cy="1030" r="220" fill="#19c37d" opacity="0.08"/>
+    <circle cx="170" cy="940" r="220" fill="#8b5cf6" opacity="0.10"/>
+    <text x="800" y="88" text-anchor="middle" class="t1">r0crawl_skills 覆盖的不是技能点，是战场面</text><text x="800" y="136" text-anchor="middle" class="t2">一个仓库同时照顾 Web、移动端、二进制、协议、样本、固件和自动化复现</text><rect x="70" y="180" width="720" height="340" rx="22" ry="22" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><text x="98" y="236" font-size="30" font-weight="900" fill="#2f7dff">🌐 Web / JS 线</text><circle cx="104" cy="278" r="7" fill="#2f7dff"/><text x="126" y="286" font-size="20" fill="#d8e4ff">sign / token / cookie / header / 响应解密</text><circle cx="104" cy="334" r="7" fill="#2f7dff"/><text x="126" y="342" font-size="20" fill="#d8e4ff">XHR / fetch / WebSocket / Worker / iframe / ServiceWorker</text><circle cx="104" cy="390" r="7" fill="#2f7dff"/><text x="126" y="398" font-size="20" fill="#d8e4ff">WebCrypto、浏览器补环境、指纹、JSVMP、WASM</text><circle cx="104" cy="446" r="7" fill="#2f7dff"/><text x="126" y="454" font-size="20" fill="#d8e4ff">瑞数 / Akamai / Cloudflare / AWS WAF / Kasada / DataDome / PerimeterX</text><rect x="810" y="180" width="720" height="340" rx="22" ry="22" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><text x="838" y="236" font-size="30" font-weight="900" fill="#19c37d">📱 Android / iOS 线</text><circle cx="844" cy="278" r="7" fill="#19c37d"/><text x="866" y="286" font-size="20" fill="#d8e4ff">APK / AAB / DEX / smali / Manifest / ClassLoader</text><circle cx="844" cy="334" r="7" fill="#19c37d"/><text x="866" y="342" font-size="20" fill="#d8e4ff">Frida、adb、logcat、Hook、动态调试</text><circle cx="844" cy="390" r="7" fill="#19c37d"/><text x="866" y="398" font-size="20" fill="#d8e4ff">DEX dump、修复、重建、校验</text><circle cx="844" cy="446" r="7" fill="#19c37d"/><text x="866" y="454" font-size="20" fill="#d8e4ff">Root、模拟器、anti-Frida、TLS Pinning、完整性链</text><rect x="70" y="560" width="720" height="340" rx="22" ry="22" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><text x="98" y="616" font-size="30" font-weight="900" fill="#ff9f1a">🧩 Native / 二进制线</text><circle cx="104" cy="658" r="7" fill="#ff9f1a"/><text x="126" y="666" font-size="20" fill="#d8e4ff">PE / ELF / Mach-O / SO，Windows / Linux / macOS 全覆盖</text><circle cx="104" cy="714" r="7" fill="#ff9f1a"/><text x="126" y="722" font-size="20" fill="#d8e4ff">IDA / Ghidra / Rizin / gdb / WinDbg / Unicorn / angr</text><circle cx="104" cy="770" r="7" fill="#ff9f1a"/><text x="126" y="778" font-size="20" fill="#d8e4ff">符号恢复、结构体恢复、函数边界、调用图</text><circle cx="104" cy="826" r="7" fill="#ff9f1a"/><text x="126" y="834" font-size="20" fill="#d8e4ff">壳、loader、匿名 RX、OLLVM、虚拟化保护</text><rect x="810" y="560" width="720" height="340" rx="22" ry="22" fill="#111a33" stroke="#27345f" stroke-width="2" filter="url(#shadow)"/><text x="838" y="616" font-size="30" font-weight="900" fill="#8b5cf6">🛰️ 协议 / 样本 / 固件线</text><circle cx="844" cy="658" r="7" fill="#8b5cf6"/><text x="866" y="666" font-size="20" fill="#d8e4ff">PCAP、TCP/UDP、WebSocket、gRPC、Protobuf、GraphQL</text><circle cx="844" cy="714" r="7" fill="#8b5cf6"/><text x="866" y="722" font-size="20" fill="#d8e4ff">恶意样本 triage、动态分析、C2、IOC、YARA / Sigma</text><circle cx="844" cy="770" r="7" fill="#8b5cf6"/><text x="866" y="778" font-size="20" fill="#d8e4ff">固件、U-Boot、SquashFS、IoT、BLE、USB</text><circle cx="844" cy="826" r="7" fill="#8b5cf6"/><text x="866" y="834" font-size="20" fill="#d8e4ff">fuzz、crash、CTF、游戏安全、IL2CPP、反作弊</text><rect x="70" y="930" width="1460" height="150" rx="22" ry="22" fill="#0f1730" stroke="#31456f" stroke-width="2" filter="url(#shadow)"/><text x="110" y="985" font-size="28" font-weight="900" fill="#ffffff">真正离谱的点：</text><text x="340" y="985" font-size="24" fill="#c6d5ff">它不是把内容堆在一起，而是把不同战场统一进一条</text><text x="110" y="1028" font-size="24" fill="#c6d5ff">“采集 → 路由 → 分析 → 复现 → 报告” 的闭环。</text>
+    </svg>
