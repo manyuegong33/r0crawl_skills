@@ -1,0 +1,4 @@
+interface:
+  display_name: "KCTF HexMaze Transform"
+  short_description: "KCTF byte transform inversion."
+  default_prompt: "Use this skill for KCTF byte-stream transform puzzles with fixed-size blocks, length-dependent tails, and reversible byte/nibble mappings. Infer the block rule from samples, then invert the transform and replay the original sample."

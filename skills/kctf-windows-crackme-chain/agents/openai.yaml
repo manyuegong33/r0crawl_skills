@@ -1,0 +1,4 @@
+interface:
+  display_name: "KCTF Windows Crackme Chain"
+  short_description: "Solve Windows KCTF crackme chains with layered checks"
+  default_prompt: "Use kctf-windows-crackme-chain for Windows KCTF crackmes, serial checkers, SMC loaders, anti-debug layers, lookup tables, RSA gates, and Feistel-style math. Classify the gate chain, validate the binary type, and solve each layer in order."

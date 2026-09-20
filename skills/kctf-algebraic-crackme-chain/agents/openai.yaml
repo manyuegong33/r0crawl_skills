@@ -1,0 +1,4 @@
+interface:
+  display_name: "KCTF Algebraic Crackme Chain"
+  short_description: "KCTF Windows crackme chain solver."
+  default_prompt: "Use this skill for KCTF-style Windows crackmes with layered codecs, shell thunks, and final algebraic or polynomial checks. Follow the staged decode -> normalize -> root-find -> verify workflow."

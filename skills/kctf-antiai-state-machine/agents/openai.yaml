@@ -1,0 +1,4 @@
+interface:
+  display_name: "KCTF AntiAI State Machine"
+  short_description: "KCTF AntiAI state-machine crackmes."
+  default_prompt: "Use this skill for KCTF Windows AntiAI or anti-analysis crackmes with fixed-length inputs, hidden state buffers, debugger checks, and staged integer recovery. Verify on the raw sample first, then derive the state transition and replay it."

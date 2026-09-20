@@ -1,0 +1,4 @@
+interface:
+  display_name: "KCTF Linux VM REPL Pwn"
+  short_description: "KCTF Linux REPL and pwn chains."
+  default_prompt: "Use this skill for KCTF Linux ELF64 binaries that expose a prompt-driven REPL or VM, often with PIE, canary, NX, and Full RELRO. Recover the dispatch path, then build a reproducible exploit or solver chain from the raw binary and libc."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "KCTF Windows SMC Chain"
+  short_description: "KCTF Windows self-modifying chains."
+  default_prompt: "Use this skill for KCTF Windows crackmes with self-modifying code, anti-debugging, mixed 32/64-bit shells, and arithmetic gates. Dump or emulate the staged code first, then solve the clean checker and replay the sample."

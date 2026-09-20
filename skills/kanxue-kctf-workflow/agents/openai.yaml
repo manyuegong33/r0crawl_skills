@@ -1,0 +1,3 @@
+display_name: "Kanxue KCTF Workflow"
+short_description: "Fast KCTF triage for writeups, archives, binaries"
+default_prompt: "Use kanxue-kctf-workflow for 看雪 KCTF / 题面 / writeup / 附件 tasks. Triage the bundle, classify the challenge, run a safe baseline, verify the article's success condition, and keep a replay command plus notes."

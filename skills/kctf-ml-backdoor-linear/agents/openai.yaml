@@ -1,0 +1,3 @@
+display_name: "KCTF ML Backdoor Linear"
+short_description: "Solve small linear-backdoor CTF models from raw weights"
+default_prompt: "Use kctf-ml-backdoor-linear for KCTF model crackmes, safetensors backdoors, token-id-as-feature models, and small linear/ReLU puzzles. Parse weights, derive constraints, solve the visible inequalities, and verify the prompt directly from the raw artifact."

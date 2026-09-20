@@ -1,0 +1,4 @@
+interface:
+  display_name: "KCTF Android JNI Mixed Flow"
+  short_description: "KCTF Android JNI mixed-flow crackmes."
+  default_prompt: "Use this skill for KCTF Android APKs where Java input enters native code through JNI, even/odd or channel splits appear, and the real check lives in lib*.so. Trace Java, JNI, and native state separately, then verify on the raw app."

@@ -176,3 +176,10 @@ The router selects a small subset for each task. Beginners do not need to memori
 | `wechat-miniprogram-reversing` | Beginner-friendly workflow for wechat miniprogram reversing |
 | `win-dbg-crash-triage` | Beginner-friendly workflow for win dbg crash triage |
 | `windows-reversing` | Beginner-friendly workflow for windows reversing |
+| `kctf2026-题4-车流困城` | KCTF 2026 第四题：Heaven's Gate、异常驱动 VM、魔改 AES、多项式整数根、自定义 Base64 |
+| `kctf2026-题5-忆海倒带` | KCTF 2026 第五题：88-hex 输入、44 字节大数、XOR/checksum/RSA/lookup 四重校验分段逆推 |
+| `kctf2026-题6-书院迷局` | KCTF 2026 第六题：Android JNI 混合流程、奇偶通道分离、XOF/ARX、46 位稀疏布尔门 SAT、TEA/LCG |
+| `kctf2026-题7-暗能潜流` | KCTF 2026 第七题：HexMaze 确定性加密、6 字节固定骨架、nibble 周期变换、3 字节分块位置重排 |
+| `kctf-windows-smc-chain` | KCTF 2026 第八题：两段 SMC、FNV-1a 密钥流、Base-94 Horner 编码、GF(2^127-39) 多项式、Feistel 循环 |
+| `kctf2026-题9-星海抉择` | KCTF 2026 第九题：无 embedding 语言模型、lm_head 线性不等式、线性规划求解 |
+| `kctf2026-题10-曦光初现` | KCTF 2026 第十题：NaN-boxing 解释器、BinOp 48 位截断漏洞、tcache 投毒、__free_hook 劫持 |
